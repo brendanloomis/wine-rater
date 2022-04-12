@@ -5,6 +5,7 @@ import Landing from '../Landing/Landing';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Nav from '../Nav/Nav';
+import WineList from '../WineList/WineList';
 
 function App() {
 
@@ -25,6 +26,11 @@ function App() {
           exact
           path='/login'
           component={Login}
+        />
+        <Route
+          exact
+          path='/wines'
+          component={WineList}
         />
       </>
     )
