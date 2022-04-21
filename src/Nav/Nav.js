@@ -7,7 +7,7 @@ function Nav() {
         <div className='nav'>
             <Link to='/' className='nav-item'>Home</Link>
             {' '}
-            <Link to='/wines'>My Wines</Link>
+            <Link to='/wines' className='nav-item'>My Wines</Link>
             {' '}
             <Link to='/login' className='nav-item'>Log In</Link>
         </div>

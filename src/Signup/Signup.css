@@ -1,0 +1,56 @@
+.signup {
+    background-color: #c090ad;
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 10%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.signup h2 {
+    margin-top: 0px;
+    font-size: 35px;
+}
+
+.signup-form label {
+    margin: 5px 0px;
+    display: block;
+}
+
+.signup-form input {
+    margin: 5px 0px;
+}
+
+.signup-buttons {
+    margin: 10px;
+    text-align: center;
+}
+
+/* Responsive design for desktop */
+@media all and (min-width: 800px) {
+    .signup {
+        width: 500px;
+        padding: 50px 80px;
+        margin-top: 50px;
+        text-align: left;
+    }
+
+    .signup h2 {
+        text-align: center;
+    }
+
+    .signup label {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .signup input {
+        float: right;
+    }
+
+    .signup p {
+        text-align: center;
+    }
+}

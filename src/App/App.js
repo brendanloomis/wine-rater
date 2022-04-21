@@ -6,6 +6,7 @@ import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Nav from '../Nav/Nav';
 import WineList from '../WineList/WineList';
+import WineDetail from '../WineDetail/WineDetail';
 
 function App() {
 
@@ -31,6 +32,13 @@ function App() {
           exact
           path='/wines'
           component={WineList}
+        />
+        <Route 
+          exact
+          path='/wines/:wine_id'
+          render={(props) => (
+            <WineDetail {...props} />
+          )}
         />
       </>
     )

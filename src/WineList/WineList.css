@@ -1,0 +1,50 @@
+.wine-list {
+    margin-bottom: 60px;
+}
+
+.wine-list h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.wine-list ul {
+    list-style: none;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#add-wine-button {
+    display: block;
+    margin: auto;
+}
+
+#varietal-filter {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.wine-link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Responsive design for desktop */
+@media all and (min-width: 800px) {
+    .wine-list {
+        margin-bottom: 100px;
+    }
+
+    .wine-list ul {
+        padding: 40px calc((100% - (255px * 3)) / 2);
+        justify-content: left;
+    }
+
+    .wine-list h2 {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,57 @@
+.login {
+    background-color: #c090ad;
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 10%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.login h2 {
+    margin-top: 0px;
+    font-size: 35px;
+}
+
+.login-form input {
+    margin-top: 5px 0px;
+}
+
+.login-buttons {
+    margin: 10px;
+}
+
+.login-form div {
+    margin: 10px;
+    text-align: center;
+}
+
+/* Responsive design for desktop */
+@media all and (min-width: 800px) {
+    .login {
+        width: 500px;
+        padding: 50px 80px;
+        margin-top: 50px;
+        text-align: left;
+        margin-bottom: 100px;
+    }
+
+    .login h2 {
+        text-align: center;
+    }
+
+    .login label {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .login input {
+        float: right;
+        margin-top: 5px;
+    }
+
+    .login p {
+        text-align: center;
+    }
+}

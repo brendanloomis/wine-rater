@@ -1,0 +1,16 @@
+.wine {
+    background-color: #c090ad;
+    margin-bottom: 15px;
+    text-align: center;
+    flex: 0 0 215px;
+    margin: 10px;
+    width: 225px;
+    height: 250px;
+}
+
+.wine h3 {
+    padding-top: 90px;
+    font-size: 18px;
+}
+
+/* Change rating to stars and move to the bottom of the wine */

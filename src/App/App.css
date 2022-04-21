@@ -1,0 +1,42 @@
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+header {
+    background-color: #9E768F;
+    padding: 5px;
+    margin: 0px;
+}
+
+footer {
+    background-color: #9E768F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button {
+    border: solid;
+    border-width: 1px;
+    background-color: #ead2e0;
+    height: 20px;
+    width: 80px;
+}
+
+/* Responsive design for desktop */
+@media all and (min-width: 800px) {
+    h1 {
+        font-size: 42px;
+        text-align: left;
+        margin-left: 15px;
+    }
+}

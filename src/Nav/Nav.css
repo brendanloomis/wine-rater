@@ -1,0 +1,21 @@
+.nav {
+    background-color: #9E768F;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.nav-item {
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+/* Responsive design for desktop */
+@media all and (min-width: 800px) {
+    .nav {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
