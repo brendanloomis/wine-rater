@@ -27,6 +27,11 @@
     text-align: center;
 }
 
+.demo p {
+    font-size: 15px;
+    margin: 0px;
+}
+
 /* Responsive design for desktop */
 @media all and (min-width: 800px) {
     .login {

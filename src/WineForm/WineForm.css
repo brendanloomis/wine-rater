@@ -1,0 +1,12 @@
+.wine-form label {
+    margin: 5px;
+}
+
+.wine-form input {
+    margin-top: 5px;
+}
+
+.wine-form-buttons {
+    margin: 10px;
+    text-align: center;
+}

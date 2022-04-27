@@ -1,10 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './WineDetail.css';
-import store from '../store';
+import { findWine } from '../helper-functions';
+import WineContext from '../WineContext';
+import { Link } from 'react-router-dom';
+import config from '../config';
 
 function WineDetail(props) {
+    const context = useContext(WineContext);
+
     const { wine_id } = props.match.params;
-    const wine = store.wines.filter(wine => wine.wine_id === wine_id)[0];
+    const wine = findWine(context.wines, parseInt(wine_id)) || {};
+
+    const handleDelete = (wine_id) => {
+        fetch(`${config.API_ENDPOINT}/wines/${wine_id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'authorization': `bearer ${config.API_KEY}`
+            }
+        })
+            .then(res => {
+                if (!res.ok) {
+                    return res.json().then(error => {
+                        throw error;
+                    });
+                }
+            })
+            .then(() => {
+                props.history.push('/wines');
+                context.deleteWine(wine.wine_id);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
 
     return (
         <div className='wine-detail'>
@@ -15,8 +44,22 @@ function WineDetail(props) {
             <p>Rating: {wine.rating}</p>
             <p>Notes: {wine.notes}</p>
             <div className='wine-detail-buttons'>
-                <button>Edit</button>
-                <button>Delete</button>
+                <Link to={`/edit-wine/${wine.wine_id}`}>
+                    <button>Edit</button>
+                </Link>
+                {' '}
+                <button
+                    id='delete-wine'
+                    onClick={() => handleDelete(wine_id)}
+                >
+                    Delete
+                </button>
+                {' '}
+                <button
+                    onClick={() => props.history.push('/wines')}
+                >
+                    Back
+                </button>
             </div>
         </div>
     )

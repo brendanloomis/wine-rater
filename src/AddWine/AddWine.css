@@ -1,0 +1,52 @@
+.add-wine {
+    background-color: #c090ad;
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 10%;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.add-wine h2 {
+    margin-top: 0px;
+    font-size: 35px;
+}
+
+.add-wine label {
+    display: block;
+}
+
+/* Responsive design for desktop */
+@media all and (min-width: 800px) {
+    .add-wine {
+        width: 500px;
+        padding: 50px;
+        text-align: left;
+    }
+
+    .add-wine h2 {
+        text-align: center;
+    }
+
+    .add-wine label {
+        display: inline-block;
+    }
+
+    .add-wine input, .add-wine select {
+        float: right;
+    }
+
+    .add-wine select {
+        margin-top: 5px;
+        width: 147px;
+    }
+
+    .add-wine textarea {
+        display: block;
+        margin-left: 5px;
+        width: 98%;
+        height: 100px;
+    }
+}
